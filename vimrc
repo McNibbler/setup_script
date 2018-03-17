@@ -1,5 +1,5 @@
-" Maintainer:	Vincent Zhao
-" Last change:	1/28/2018
+" Maintainer:	Thomas Kaunzinger
+" Last change:	3/17/2018
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -48,14 +48,6 @@ endif
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
-
-" Powerline setup
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-set laststatus=2
-set noshowmode
-set t_Co=256
 
 " Enable Pathogen
 execute pathogen#infect()

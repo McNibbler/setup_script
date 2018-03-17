@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# A script to install stuff on new machines, by Vincent Zhao
+# A script to install stuff on new machines, for Thomas Kaunzinger cloned from Vincent Zhao
 
 rootpath=$(pwd)
 
-sudo add-apt-repository ppa:fish-shell/release-2 -y
 sudo add-apt-repository ppa:git-core/ppa -y
-sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa -y
 sudo apt-get update
-sudo apt-get install git fish vim curl tmux firefox-trunk htop screenfetch python3-pip build-essential cmake python-dev python3-dev unzip -y
+sudo apt-get install git fish vim curl tmux htop screenfetch python3-pip build-essential cmake python-dev python3-dev unzip -y
 sudo apt dist-upgrade -fy
 sudo apt-get autoremove -y
 pip3 install --upgrade pip
-git config --global user.name "Vincent Zhao"
-git config --global user.email "gyroknight@users.noreply.github.com"
+git config --global user.name "McNibbler"
+git config --global user.email "McNibbler@users.noreply.github.com"
 cp tmux.conf ~/.tmux.conf
 
 #Vim setup
@@ -35,11 +33,7 @@ sudo pip3 install powerline-status
 cp vimrc ~/.vimrc 
 mkdir -p ~/.vim/.undo ~/.vim/.backup ~/.vim/.swp
 
-#Fish setup
-sudo chsh -s `which fish`
-mkdir -p ~/.config/fish
-cp config.fish ~/.config/fish/
-
 #Cleanup
 cd $rootpath
 rm matchit.zip
+
