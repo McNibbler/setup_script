@@ -70,3 +70,5 @@ set smartcase
 highlight LineNr ctermfg=lightblue ctermbg=black
 set tabstop=4
 set shiftwidth=4
+
+syntax on
