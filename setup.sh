@@ -6,7 +6,7 @@ rootpath=$(pwd)
 
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
-sudo apt-get install git fish vim curl tmux htop screenfetch python3-pip build-essential cmake python-dev python3-dev unzip -y
+sudo apt-get install git zsh vim curl tmux htop screenfetch python3-pip build-essential cmake python-dev python3-dev unzip -y
 sudo apt dist-upgrade -fy
 sudo apt-get autoremove -y
 pip3 install --upgrade pip
